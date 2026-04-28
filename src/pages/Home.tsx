@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Pricing } from "@/components/Pricing";
+// import { Pricing } from "@/components/Pricing";
 import { TrustBar } from "@/components/TrustBar";
 import { Footer } from "@/components/Footer";
 import { useTheme } from "@/hooks/useTheme";
