@@ -18,8 +18,8 @@ export function Navbar({ theme, toggleTheme }: NavbarProps) {
 
         <div className="text-center">
           <div className="text-2xl font-bold">
-            <span className="text-[#ED1C24]">BLR</span>
-            <span className={isDark ? "text-white" : "text-slate-900"}>BOOK</span>
+            <span className="text-[#ED1C24]">ROYAL</span>
+            <span className={isDark ? "text-white" : "text-slate-900"}>X</span>
           </div>
           <div className={`flex items-center justify-center gap-1 text-[10px] uppercase tracking-wider ${isDark ? "text-white" : "text-slate-600"}`}>
             <span>★</span>

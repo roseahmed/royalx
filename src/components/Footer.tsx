@@ -18,10 +18,10 @@ export function Footer({ theme }: FooterProps) {
             <div className="mb-6">
               <div className="mb-4 flex items-center gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#ED1C24]">
-                  <span className="text-xl font-bold text-[#ED1C24]">B</span>
+                  <span className="text-xl font-bold text-[#ED1C24]">R</span>
                 </div>
                 <span className={`text-2xl font-bold ${isDark ? "text-white" : "text-slate-900"}`}>
-                  BLR BOOK
+                  ROYAL X
                 </span>
               </div>
               <p className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}>
@@ -60,7 +60,7 @@ export function Footer({ theme }: FooterProps) {
           }`}
         >
           <p className={`text-sm ${isDark ? "text-white/50" : "text-slate-500"}`}>
-            © 2025 BLR BOOK. All Rights Reserved.
+            © 2025 ROYAL X. All Rights Reserved.
           </p>
           <div className="flex items-center gap-2">
             <Lock className={`h-4 w-4 ${isDark ? "text-white" : "text-slate-600"}`} />
