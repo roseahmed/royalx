@@ -14,7 +14,7 @@ export function Home() {
       <main className="pt-20">
         <Hero theme={theme} />
         <TrustBar theme={theme} />
-        <Pricing theme={theme} />
+        {/* <Pricing theme={theme} /> */}
       </main>
       <Footer theme={theme} />
     </>
