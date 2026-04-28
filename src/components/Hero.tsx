@@ -1,4 +1,3 @@
-
 import { MessageCircle } from "lucide-react";
 import { Reveal } from "./Reveal";
 
@@ -11,52 +10,93 @@ export function Hero({ theme }: HeroProps) {
 
   return (
     <section
-      className={`relative flex min-h-dvh w-full items-center justify-center overflow-hidden px-4 py-20 ${isDark ? "bg-black" : "bg-white"}`}
+      className={`relative flex min-h-dvh w-full items-center justify-center overflow-hidden px-4 py-20 ${
+        isDark ? "bg-black" : "bg-slate-50"
+      }`}
     >
-      <div className="absolute inset-0 z-0">
-        <div className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-[#ED1C24]/20 to-transparent blur-3xl" />
-        <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-[#005BBB]/20 to-transparent blur-3xl" />
-        {isDark && <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50" />}
+      {/* Ambient Background Effects */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-[#ED1C24]/15 to-transparent blur-[120px]" />
+        <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-[#005BBB]/15 to-transparent blur-[120px]" />
+        {isDark && (
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/50 to-black/90" />
+        )}
       </div>
 
-      <div className="relative z-10 mx-auto max-w-3xl text-center">
+      <div className="relative z-10 mx-auto max-w-4xl text-center flex flex-col items-center">
+        {/* Typography: Tighter tracking and explicit leading for a cohesive block */}
         <Reveal>
-          <h1 className={`mb-2 text-5xl font-black tracking-tight md:text-7xl ${isDark ? "text-white" : "text-slate-900"}`}>
-            PLAY SMART
-          </h1>
-          <h1 className="mb-6 text-5xl font-black tracking-tight md:text-7xl">
-            <span className="text-[#ED1C24]">WIN BIG</span>
-          </h1>
+          <div className="mb-6 flex flex-col items-center">
+            <h1
+              className={`text-6xl font-black tracking-tighter leading-none md:text-8xl lg:text-[7rem] ${
+                isDark ? "text-white" : "text-slate-900"
+              }`}
+            >
+              PLAY SMART
+            </h1>
+            <h1 className="text-6xl font-black tracking-tighter leading-none md:text-8xl lg:text-[7rem] text-[#ED1C24] drop-shadow-[0_0_15px_rgba(237,28,36,0.2)]">
+              WIN BIG
+            </h1>
+          </div>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className={`mb-8 text-lg ${isDark ? "text-white" : "text-slate-700"}`}>
+          <p
+            className={`mb-10 text-xl md:text-2xl font-medium tracking-wide ${
+              isDark ? "text-slate-300" : "text-slate-600"
+            }`}
+          >
             Get your gaming ID instantly on{" "}
-            <span className="font-bold text-[#25D366]">WhatsApp</span>
+            <span className="font-bold text-[#25D366] drop-shadow-[0_0_8px_rgba(37,211,102,0.4)]">
+              WhatsApp
+            </span>
           </p>
         </Reveal>
 
+        {/* Buttons: Constrained width, premium elevation hovers, and gradient aesthetics */}
         <Reveal delay={0.3}>
-          <div className="flex flex-col items-center gap-4">
-            <button className="flex w-full max-w-sm items-center justify-center gap-3 rounded-xl bg-[#25D366] px-6 py-4 font-bold text-white transition-transform hover:scale-105 md:max-w-md">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
-                <MessageCircle className="h-6 w-6 text-[#25D366]" />
+          <div className="flex w-full max-w-md flex-col items-center gap-5 mx-auto">
+            <a
+              href="https://wa.me/919999999999?text=Hi%2C%20Blr%20Book%20-%20I%20want%20LOTUS%20ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex w-full items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-r from-[#1fa34e] to-[#25D366] p-[2px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(37,211,102,0.5)] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black"
+            >
+              <div className="flex w-full items-center gap-4 rounded-xl bg-black/10 px-5 py-4 backdrop-blur-sm transition-colors group-hover:bg-transparent">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-inner">
+                  <MessageCircle className="h-7 w-7 text-[#25D366]" />
+                </div>
+                <div className="text-left flex-1">
+                  <div className="text-base font-extrabold text-white tracking-wide">
+                    GET LOTUS ID ON WHATSAPP
+                  </div>
+                  <div className="text-sm font-medium text-white/90">
+                    Instant ID in 2 mins
+                  </div>
+                </div>
               </div>
-              <div className="text-left">
-                <div className="text-sm">GET LOTUS ID ON WHATSAPP</div>
-                <div className="text-xs font-normal opacity-90">Instant ID in 2 mins</div>
-              </div>
-            </button>
+            </a>
 
-            <button className="flex w-full max-w-sm items-center justify-center gap-3 rounded-xl bg-[#005BBB] px-6 py-4 font-bold text-white transition-transform hover:scale-105 md:max-w-md">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
-                <MessageCircle className="h-6 w-6 text-[#005BBB]" />
+            <a
+              href="https://wa.me/919999999999?text=Hi%2C%20Blr%20Book%20-%20I%20want%20B%20SAFE%20ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex w-full items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-r from-[#004A99] to-[#005BBB] p-[2px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(0,91,187,0.5)] focus:outline-none focus:ring-2 focus:ring-[#005BBB] focus:ring-offset-2 focus:ring-offset-black"
+            >
+              <div className="flex w-full items-center gap-4 rounded-xl bg-black/10 px-5 py-4 backdrop-blur-sm transition-colors group-hover:bg-transparent">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-inner">
+                  <MessageCircle className="h-7 w-7 text-[#005BBB]" />
+                </div>
+                <div className="text-left flex-1">
+                  <div className="text-base font-extrabold text-white tracking-wide">
+                    GET BSAFE ID ON WHATSAPP
+                  </div>
+                  <div className="text-sm font-medium text-white/90">
+                    Instant ID in 2 mins
+                  </div>
+                </div>
               </div>
-              <div className="text-left">
-                <div className="text-sm">GET BSAFE ID ON WHATSAPP</div>
-                <div className="text-xs font-normal opacity-90">Instant ID in 2 mins</div>
-              </div>
-            </button>
+            </a>
           </div>
         </Reveal>
       </div>

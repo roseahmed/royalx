@@ -21,7 +21,9 @@ export function TrustBar({ theme }: TrustBarProps) {
               <Users className="h-8 w-8 text-[#ED1C24]" />
               <div>
                 <p className="text-2xl font-black text-[#ED1C24]">10,000+</p>
-                <p className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}>
+                <p
+                  className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}
+                >
                   PLAYERS TRUST US
                 </p>
               </div>
@@ -33,7 +35,9 @@ export function TrustBar({ theme }: TrustBarProps) {
               <Shield className="h-8 w-8 text-[#ED1C24]" />
               <div>
                 <p className="text-2xl font-black text-[#ED1C24]">100%</p>
-                <p className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}>
+                <p
+                  className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}
+                >
                   SAFE & SECURE
                 </p>
               </div>
@@ -45,7 +49,9 @@ export function TrustBar({ theme }: TrustBarProps) {
               <Zap className="h-8 w-8 text-[#ED1C24]" />
               <div>
                 <p className="text-2xl font-black text-[#ED1C24]">24/7</p>
-                <p className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}>
+                <p
+                  className={`text-sm ${isDark ? "text-white/70" : "text-slate-600"}`}
+                >
                   CUSTOMER SUPPORT
                 </p>
               </div>
